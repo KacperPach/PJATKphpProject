@@ -65,3 +65,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # PJATKphpProject
+
+useful command dump:
+php artisan migrate:reset
+php artisan migrate
+
+php artisan make:model Post -m   
+php artisan make:controller BlogPostController
+php artisan serve  < serve 
+npm run dev < tailwind 

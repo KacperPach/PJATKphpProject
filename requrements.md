@@ -24,6 +24,6 @@ Wymagania funkcjonalne:
 - [ ] użycie sesji w projekcie, nie sztuczne, tylko takie by pozwalało realnie zobrazować ich funkcjonalność
 - [ ] użycie ciasteczek - utworzenie oraz realne skorzystanie z nich
 - [ ] użycie pętli, instrukcje warunkowe, tablice, funkcji
-- [ ] projekt realizujemy w oparciu o programowanie obiektowe
-- [ ] użycie czegoś z PHP, co nie było pokazywane na zajęciach - biblioteka, narzędzie, konstrukcja, temat (wymagane omówienie) (dodatkowe)
+- [X] projekt realizujemy w oparciu o programowanie obiektowe
+- [X] **LARAVEL** użycie czegoś z PHP, co nie było pokazywane na zajęciach - biblioteka, narzędzie, konstrukcja, temat (wymagane omówienie) (dodatkowe) 
 - [ ] hostowanie strony na serwerze zewnętrznym (dodatkowe)
