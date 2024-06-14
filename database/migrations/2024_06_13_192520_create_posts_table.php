@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('body');
-            $table->string('path_to_image')->nullable($value = true);
+            $table->string('file_extention')->nullable($value = true);
             $table->timestamps();
         });
     }

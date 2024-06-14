@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css','resources/js/app.js'])
 
 </head>
 <body class="bg-gray-950 h-dvh p-20 flex justify-around">
     <div class="w-3/4 p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form class="space-y-6" method="post" action="{{route('savePost')}}">
+        <form class="space-y-6" method="post" action="{{route('savePost')}}" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h5 class="text-xl font-medium text-gray-900 dark:text-white">Dodaj nowy post</h5>
             <div class="mb-5">

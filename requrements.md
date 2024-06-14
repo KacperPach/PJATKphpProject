@@ -1,6 +1,12 @@
 # PROJECT DESCRIPTION
-- [ ] Blog oferuje możliwość dodawania, usuwania oraz edycji wpisów.
-- [ ] Każdy wpis składa się z tytułu, treści i opcjonalnego obrazka, który wyświetli się pod wpisem oraz daty opublikowania.
+- [ ] Blog oferuje możliwość:
+    - [X] dodawania,
+    - [X] usuwania
+    - [ ] edycji wpisów.
+- [X] Każdy wpis składa się z:
+  - [x]  tytułu
+  - [x]  treści 
+  - [X]  opcjonalnego obrazka, który wyświetli się pod wpisem oraz daty opublikowania.
 - [ ] Strona posiada możliwość dodawania komentarzy do wpisów, które również mają datę dodania.
 - [ ] Wpisy powinny być pogrupowane po datach, a strona pozwala dodatkowo przechodzić do poprzedniego i następnego wpisu. 
 - [ ] Data wstawienia wpisu dodaje się automatycznie. 
@@ -15,15 +21,19 @@
 
 # PROJECT REQUREMENTS
 Wymagania funkcjonalne:
-- [ ] użycie formularzy i ich funkcjonalności - odbieranie i przetwarzanie danych
+- [X] użycie formularzy i ich funkcjonalności - odbieranie i przetwarzanie danych
 - [ ] zapisywanie do pliku danych - np. zrzut bazy danych, zapis danych z formularza itp.
-- [ ] zapisywanie do bazy danych
-- [ ] odczytywanie z bazy danych
+- [X] zapisywanie do bazy danych
+- [X] odczytywanie z bazy danych
 - [ ] update i usuwanie z bazy danych
 - [ ] system logowania
 - [ ] użycie sesji w projekcie, nie sztuczne, tylko takie by pozwalało realnie zobrazować ich funkcjonalność
 - [ ] użycie ciasteczek - utworzenie oraz realne skorzystanie z nich
-- [ ] użycie pętli, instrukcje warunkowe, tablice, funkcji
+- [ ] użycie:
+  - [X]  pętli,
+  - [ ]  instrukcje warunkowe,
+  - [X]  tablice, 
+  - [X]  funkcji
 - [X] projekt realizujemy w oparciu o programowanie obiektowe
 - [X] **LARAVEL** użycie czegoś z PHP, co nie było pokazywane na zajęciach - biblioteka, narzędzie, konstrukcja, temat (wymagane omówienie) (dodatkowe) 
 - [ ] hostowanie strony na serwerze zewnętrznym (dodatkowe)
