@@ -1,20 +1,45 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogPostController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', [BlogPostController::class,'getPost']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/createBlogPost', function () {
-    return view('createBlogPost');
-})->name('createBlogPost');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/post/{id}', [BlogPostController::class, 'getSinglePost']);
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/post/{id}', [BlogPostController::class, 'getSinglePost']);
 
-Route::get('/post/{id}/edit', [BlogPostController::class,'getPostEditor']);
+    Route::get('/', [BlogPostController::class,'getPost']);
 
-Route::put('/post/{id}/edit', [BlogPostController::class,'updatePost'])->name('updatePost');
+});
+Route::middleware(['isAdmin','auth'])->group(function () {
+    Route::get('admin/dashboard', function () {
+        return view('admin/dashboard');
+    });
+    Route::get('admin/post/{id}', [AdminController::class, 'getSinglePost']);
+    Route::get('admin/', [AdminController::class,'getPost']);
+    Route::get('admin/post/{id}/edit', [AdminController::class,'getPostEditor']);
 
-Route::post('/savePost', [BlogPostController::class, 'savePost'])->name('savePost');
+    Route::put('admin/post/{id}/edit', [AdminController::class,'updatePost'])->name('admin.updatePost');
 
-Route::delete('/post/{id}/delete', [BlogPostController::class, 'deletePost'])->name('deletePost');
+    Route::post('admin/savePost', [AdminController::class, 'savePost'])->name('admin.savePost');
+
+    Route::delete('admin/post/{id}/delete', [AdminController::class, 'deletePost'])->name('admin.deletePost');
+
+    Route::get('admin/createBlogPost', function () {
+        return view('admin/createBlogPost');
+    })->name('admin.createBlogPost');
+});
+
+
+require __DIR__.'/auth.php';

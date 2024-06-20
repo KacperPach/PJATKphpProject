@@ -2,14 +2,14 @@
 - [ ] Blog oferuje możliwość:
     - [X] dodawania,
     - [X] usuwania
-    - [ ] edycji wpisów.
+    - [X] edycji wpisów.
 - [X] Każdy wpis składa się z:
   - [x]  tytułu
   - [x]  treści 
   - [X]  opcjonalnego obrazka, który wyświetli się pod wpisem oraz daty opublikowania.
 - [ ] Strona posiada możliwość dodawania komentarzy do wpisów, które również mają datę dodania.
 - [ ] Wpisy powinny być pogrupowane po datach, a strona pozwala dodatkowo przechodzić do poprzedniego i następnego wpisu. 
-- [ ] Data wstawienia wpisu dodaje się automatycznie. 
+- [X] Data wstawienia wpisu dodaje się automatycznie. 
 - [ ] Użytkownicy mogą, ale nie muszą, być zalogowani przy dodawaniu komentarzy - jeśli użytkownik nie jest zarejestrowany, to autorem komentarza jest "Gość", w przeciwnym razie podajemy jego login.
 - [ ] Istnieje zakładka przeznaczona do kontaktu z autorem bloga. 
 - [ ] Na stronie dostępny jest panel administracyjny. 
@@ -29,9 +29,9 @@ Wymagania funkcjonalne:
 - [ ] system logowania
 - [ ] użycie sesji w projekcie, nie sztuczne, tylko takie by pozwalało realnie zobrazować ich funkcjonalność
 - [ ] użycie ciasteczek - utworzenie oraz realne skorzystanie z nich
-- [ ] użycie:
+- [X] użycie:
   - [X]  pętli,
-  - [ ]  instrukcje warunkowe,
+  - [X]  instrukcje warunkowe,
   - [X]  tablice, 
   - [X]  funkcji
 - [X] projekt realizujemy w oparciu o programowanie obiektowe

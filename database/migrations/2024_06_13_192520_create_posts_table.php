@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->longText('body');
             $table->string('file_extention')->nullable($value = true);
+            $table->foreignId('comment_id')->nullable();
             $table->timestamps();
         });
     }
