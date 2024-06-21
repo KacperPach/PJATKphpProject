@@ -16,6 +16,7 @@
                             stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
+                <x-post-edit-delete :post="$post"/>
             </div>
 
 

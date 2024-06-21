@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use File;
 use Storage;
+use Route;
 
-class AdminController extends Controller
+class AdminController extends BlogPostController
 {
         //
         public function savePost(Request $request) {
@@ -37,10 +38,11 @@ class AdminController extends Controller
             $post = Post::find($id);
 
             if ($post)
+                $post->comments()->delete();
                 $post->delete();
             $this->deleteFile($post->id.'.'.$post->file_extention);
 
-            return $this->getPost();
+            return parent::getPost();
         }
 
         public function getPostEditor($id) {
@@ -65,24 +67,12 @@ class AdminController extends Controller
                 if ($isCorrectExt)
                     $this->handleFile($request->file("file"), $post->id);
 
-                return $this->getSinglePost($post->id);
+
+                return parent::getSinglePost($post->id);
             }
-            return $this->getPost();
+            return parent::getPost();
         }
 
-        public function getPost() {
-            return view('admin/welcome', ['listPost' => Post::all()]);
-        }
-
-        public function getSinglePost($id) {
-            return view('admin/singlePost', ['post' => Post::find($id)]);
-        }
-
-        private function handleFile(UploadedFile $file, $id) {
-            $DESTINATION = "uploads";
-            $filename = $id .".".$file->getClientOriginalExtension();
-            $file->move($DESTINATION,$filename);
-        }
         private function deleteFile($filename) {
 
             // TODO figure out someday why no work
@@ -91,6 +81,12 @@ class AdminController extends Controller
             \Log::info(File::exists(public_path($DESTINATION.'.'.$filename)));
             if(File::exists(public_path($DESTINATION.'.'.$filename)))
                 Storage::delete(public_path($DESTINATION.'/'.$filename));
+        }
+
+        private function handleFile(UploadedFile $file, $id) {
+            $DESTINATION = "uploads";
+            $filename = $id .".".$file->getClientOriginalExtension();
+            $file->move($DESTINATION,$filename);
         }
 
         private function verifyExtention(string $ext) {

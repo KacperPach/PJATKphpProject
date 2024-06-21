@@ -16,7 +16,7 @@
 - [ ] Istnieją różne typy konta: 
    - [X] administrator (może wszystko - dodawać, usuwać, edytować wpisy, sprawdzać ewentualne logi) 
    - [ ] autor bloga (może dodawać, usuwać i edytować wpisy, może zresetować swoje hasło)
-   - [ ] użytkownik (dodaje komentarze i może zresetować swoje hasło). 
+   - [X] użytkownik (dodaje komentarze i może zresetować swoje hasło). 
 - [X] Wpisy, komentarze i informacje o użytkownikach powinny być przechowywane w bazie danych, a obrazki powinny być przechowywane jako pliki.
 
 # PROJECT REQUREMENTS
