@@ -10,7 +10,7 @@
 - [X] Strona posiada możliwość dodawania komentarzy do wpisów, które również mają datę dodania.
 - [ ] Wpisy powinny być pogrupowane po datach, a strona pozwala dodatkowo przechodzić do poprzedniego i następnego wpisu. 
 - [X] Data wstawienia wpisu dodaje się automatycznie. 
-- [ ] Użytkownicy mogą, ale nie muszą, być zalogowani przy dodawaniu komentarzy - jeśli użytkownik nie jest zarejestrowany, to autorem komentarza jest "Gość", w przeciwnym razie podajemy jego login.
+- [X] Użytkownicy mogą, ale nie muszą, być zalogowani przy dodawaniu komentarzy - jeśli użytkownik nie jest zarejestrowany, to autorem komentarza jest "Gość", w przeciwnym razie podajemy jego login.
 - [ ] Istnieje zakładka przeznaczona do kontaktu z autorem bloga. 
 - [ ] Na stronie dostępny jest panel administracyjny. 
 - [ ] Istnieją różne typy konta: 

@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 use Log;
 
-class IsAdmin
+class isAdminOrAuthor
 {
     /**
      * Handle an incoming request.
@@ -17,9 +17,10 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->type != "ADMIN") {
-            return redirect("/");
+        if (Auth::user()->type == "ADMIN" || Auth::user()->type == "AUTOR" ) {
+            return $next($request);
         }
-        return $next($request);
+        return redirect("/");
     }
+
 }

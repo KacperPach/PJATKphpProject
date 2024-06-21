@@ -1,5 +1,5 @@
 @props(['post' => "Post"])
-@if (Auth::user() != null && Auth::user()->type == 'ADMIN')
+@if (Auth::user() != null && (Auth::user()->type == 'ADMIN' || Auth::user()->type == 'AUTOR'))
 <div class="inline-flex h-11">
     <a href="/admin/post/{{ $post->id }}/edit"
         class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2.5 px-4 rounded-l">
