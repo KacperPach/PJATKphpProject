@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,6 +21,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/post/{id}', [BlogPostController::class, 'getSinglePost']);
 
     Route::get('/', [BlogPostController::class,'getPost']);
+
+    Route::post('post/{id}/comment/save', [CommentController::class, 'saveComm'])->name('saveComm');
 
 });
 Route::middleware(['isAdmin','auth'])->group(function () {
