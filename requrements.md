@@ -8,14 +8,15 @@
   - [x]  treści 
   - [X]  opcjonalnego obrazka, który wyświetli się pod wpisem oraz daty opublikowania.
 - [X] Strona posiada możliwość dodawania komentarzy do wpisów, które również mają datę dodania.
-- [ ] Wpisy powinny być pogrupowane po datach, a strona pozwala dodatkowo przechodzić do poprzedniego i następnego wpisu. 
+- [X] Wpisy powinny być pogrupowane po datach,
+  - [ ] a strona pozwala dodatkowo przechodzić do poprzedniego i następnego wpisu. 
 - [X] Data wstawienia wpisu dodaje się automatycznie. 
 - [X] Użytkownicy mogą, ale nie muszą, być zalogowani przy dodawaniu komentarzy - jeśli użytkownik nie jest zarejestrowany, to autorem komentarza jest "Gość", w przeciwnym razie podajemy jego login.
 - [ ] Istnieje zakładka przeznaczona do kontaktu z autorem bloga. 
 - [ ] Na stronie dostępny jest panel administracyjny. 
-- [ ] Istnieją różne typy konta: 
+- [X] Istnieją różne typy konta: 
    - [X] administrator (może wszystko - dodawać, usuwać, edytować wpisy, sprawdzać ewentualne logi) 
-   - [ ] autor bloga (może dodawać, usuwać i edytować wpisy, może zresetować swoje hasło)
+   - [X] autor bloga (może dodawać, usuwać i edytować wpisy, może zresetować swoje hasło)
    - [X] użytkownik (dodaje komentarze i może zresetować swoje hasło). 
 - [X] Wpisy, komentarze i informacje o użytkownikach powinny być przechowywane w bazie danych, a obrazki powinny być przechowywane jako pliki.
 
@@ -27,7 +28,7 @@ Wymagania funkcjonalne:
 - [X] odczytywanie z bazy danych
 - [X] update i usuwanie z bazy danych
 - [X] system logowania
-- [ ] użycie sesji w projekcie, nie sztuczne, tylko takie by pozwalało realnie zobrazować ich funkcjonalność
+- [X] użycie sesji w projekcie, nie sztuczne, tylko takie by pozwalało realnie zobrazować ich funkcjonalność
 - [ ] użycie ciasteczek - utworzenie oraz realne skorzystanie z nich
 - [X] użycie:
   - [X]  pętli,

@@ -14,4 +14,8 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function getAllInOrderOfDateDesc() : array {
+        return $this->orderBy("created_at","desc")->get();
+    }
 }

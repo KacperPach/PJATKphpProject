@@ -12,6 +12,10 @@ use Route;
 class AdminController extends BlogPostController
 {
         //
+        public function getAdminPanel() {
+            return view('admin/adminPanel');
+        }
+
         public function savePost(Request $request) {
 
             $isCorrectExt=false;

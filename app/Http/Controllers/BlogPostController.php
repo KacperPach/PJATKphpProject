@@ -14,11 +14,10 @@ class BlogPostController extends Controller
     //
 
     public function getPost() {
-        return view('user/welcome', ['listPost' => Post::all()]);
+        return view('user/welcome', ['listPost' => Post::orderByDesc('created_at')->get()]);
     }
 
     public function getSinglePost($id) {
-        \Log::info(Comment::where('post_id', $id)->get() );
         return view('user/singlePost', ['post' => Post::find($id), 'commList' => Comment::where('post_id', $id)->get()]);
     }
 

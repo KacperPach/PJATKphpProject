@@ -28,6 +28,9 @@ Route::middleware(['isAdminOrAuthor','auth'])->group(function () {
     Route::post('admin/savePost', [AdminController::class, 'savePost'])->name('admin.savePost');
 
     Route::delete('admin/post/{id}/delete', [AdminController::class, 'deletePost'])->name('admin.deletePost');
+});
+
+Route::middleware(['isAdmin','auth'])->group(function () {
     Route::get('admin/panel', [AdminController::class, 'getAdminPanel'])->name('admin.panel');
 });
 
